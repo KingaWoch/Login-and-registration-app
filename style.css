@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://cdn.pixabay.com/photo/2020/09/01/21/03/sunset-5536777_960_720.jpg");
+  background-position: center;
+  background-size: cover; 
+  position: absolute;
+}
+
+
+/* nav styling */
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: flex;
+}
+
+#toggle-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+}
+
+#logout-button {
+  width: 50%;
+  text-align: right;
+}
+
+#logout-button #user {
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+.navbar button {
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 25px;
+}
+
+.navbar button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* forms styling */
+
+.form-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 500px;
+  height: 480px;
+  position: relative;
+}
+
+.input-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.input-field {
+  width: 100%;
+  display: flex;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.input-field label {
+  width: 50%;
+  height: 100%;
+  padding-top: 0.8rem;
+  text-align: right;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.input-field input {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.input-field input:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.input-group button {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #ecc1a1;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.input-group button:hover {
+  cursor: pointer;
+}
+
+#login-form {
+  display: none;
+}
+
+#registration-form {
+  display: none;
+}
+
+/* transaction history styling */
+
+.history-container{
+  width: 100%;
+  height: 90vh;
+  background: rgba(255,255,255,0.7);
+}
+
+/* charts styling */
+
+#charts {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.chart {
+  margin: auto;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+#arrows {
+  display: none;
+}
+
+/* table styling */
+
+#table {
+  width: 100%;
+  height: 40vh;
+  background: transparent;
+  overflow-y: scroll;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.transaction {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  gap: 5px;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  font-size: 1.5rem;
+}
+
+
+/* for mobile phones */
+
+@media (max-width: 768px) {
+  #charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bar {
+    display: none;
+  }
+
+  #doughnut {
+    display: block;
+  }
+
+  #arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  #left-arrow,
+  #right-arrow {
+    display: block;
+    font-size: 30px;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+
+  #left-arrow {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  #right-arrow {
+    color: black;
+  }
+
+  #left-arrow,
+  #right-arrow:hover {
+    cursor: pointer;
+  }
+  .table-header {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .transaction {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  #date-header {
+    display: none;
+  }
+
+  #balance-header {
+    display: none;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .balance {
+    display: none;
+  }
+
+  .transaction:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}

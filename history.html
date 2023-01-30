@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/5655c566c8.js"
+      crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="navbar">
+          <div id="toggle-buttons"></div>
+          <div id="logout-button">
+            <span id="user"></span>
+            <button type="button">Wyloguj</button>
+          </div>
+        </div>
+      <div class="history-container">
+        <div id="charts">
+          <div class="chart" id="doughnut">
+            <canvas id="doughnut-chart" width="350" height="350"></canvas>
+          </div>
+          <div class="chart" id="bar">
+            <canvas id="bar-chart" width="350" height="350"></canvas>
+          </div>
+          <div id="arrows">
+            <div id="left-arrow">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div id="right-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        <div id="table">
+          <div class="table-header">
+            <div id="date-header">Data</div>
+            <div>Typ transakcji</div>
+            <div>Opis</div>
+            <div>Kwota</div>
+            <div id="balance-header">Saldo</div>
+          </div>
+          <div id="table-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="history.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
