@@ -5,15 +5,19 @@
   font-family: "Open Sans", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .container {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://cdn.pixabay.com/photo/2020/09/01/21/03/sunset-5536777_960_720.jpg");
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
   position: absolute;
 }
-
 
 /* nav styling */
 
@@ -29,6 +33,14 @@
   width: 50%;
   display: flex;
   justify-content: start;
+}
+
+#login-btn.hidden {
+  display: none;
+}
+
+#registration-btn.hidden {
+  display: none;
 }
 
 #logout-button {
@@ -86,6 +98,8 @@
   display: flex;
   font-size: 1.3rem;
   margin-top: 1rem;
+  position: relative;
+  gap: 1rem;
 }
 
 .input-field label {
@@ -93,7 +107,6 @@
   height: 100%;
   padding-top: 0.8rem;
   text-align: right;
-  margin-right: 1rem;
   color: #fff;
 }
 
@@ -110,6 +123,18 @@
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.error {
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: red;
+}
+
+input.invalid {
+  border: 2px solid red;
 }
 
 .input-field input:hover {
@@ -141,16 +166,24 @@
   display: none;
 }
 
+#login-form.active {
+  display: flex;
+}
+
 #registration-form {
   display: none;
 }
 
+#registration-form.active {
+  display: flex;
+}
+
 /* transaction history styling */
 
-.history-container{
+.history-container {
   width: 100%;
   height: 90vh;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 /* charts styling */
@@ -200,7 +233,6 @@
   border-bottom: 1px solid black;
   font-size: 1.5rem;
 }
-
 
 /* for mobile phones */
 

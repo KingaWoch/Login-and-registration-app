@@ -21,37 +21,43 @@
 
                     <!-- registration form -->
 
-                    <form action="" id="registration-form" class="input-group"> 
+                    <form novalidate action="" id="registration-form" class="input-group"> 
                         <div class="input-field">
                             <label for="username">Nazwa użytkownika</label>
-                            <input type="text" id="username" required minlength="6" maxlength="16">
+                            <input type="text" id="username">
                         </div>
+                        <span class="error username-error-text"></span>
                         <div class="input-field">
                             <label for="password">Hasło</label>
-                            <input type="password" id="password" required minlength="6">
+                            <input type="password" id="password">
                         </div>
+                        <span class="error password-error-text"></span>
                         <div class="input-field">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email">
                         </div>
+                        <span class="error email-error-text"></span>
                         <div class="input-field">
                             <label for="email2">Potwierdź email</label>
-                            <input type="email" id="email2" required>
+                            <input type="email" id="email2">
                         </div>
+                        <span class="error email2-error-text"></span>
                             <button type="submit" id="submit-btn">Zarejestruj</button>
                     </form>
 
                     <!-- login form -->
 
-                    <form action="" id="login-form" class="input-group">
+                    <form novalidate action="" id="login-form" class="input-group">
                         <div class="input-field">
                             <label for="login-username">Nazwa użytkownika/Email</label>
-                            <input type="text" id="login-username" required minlength="6">
+                            <input type="text" id="login-username">
                         </div>
+                        <span class="error login-username-error-text"></span>
                         <div class="input-field">
                             <label for="password">Hasło</label>
-                            <input type="password" id="login-password" required minlength="6">
+                            <input type="password" id="login-password">
                         </div>
+                        <span class="error login-password-error-text"></span>
                             <button type="submit" id="submit-btn">Zaloguj</button>
                     </form>
                 </div>
